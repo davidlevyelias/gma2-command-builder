@@ -14,8 +14,8 @@
     "example": "examples"
   },
   "scripts": {
-    "bundle": "npx luapack bundle --config luapack.config.json --verbose",
-    "bundle:analyze": "npx luapack bundle --config luapack.config.json --report dist/luapack-analysis.json",
+    "bundle": "luapack bundle --config luapack.config.json --verbose",
+    "bundle:analyze": "luapack bundle --config luapack.config.json --report dist/luapack-analysis.json",
     "example:basic": "lua .\\examples\\basic.lua",
     "example:lists": "lua .\\examples\\lists_and_tokens.lua",
     "example:chain": "lua .\\examples\\chaining_and_index.lua"
