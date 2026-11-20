@@ -15,7 +15,7 @@ local newBuilder = builderModule.newBuilder
 
 local M = {}
 
-local VERSION = "2.0.1"
+local VERSION = "2.0.2"
 M.VERSION = VERSION
 M._VERSION = VERSION
 M.info = {

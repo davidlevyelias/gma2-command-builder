@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "name": "gma2_commandbuilder",
+  "name": "gma2-command-builder",
   "platform": "ma2",
   "exports": [
     "init.lua",

@@ -2,7 +2,7 @@
 
 A lightweight, fluent API for building GMA2 command strings in Lua.
 
-Current version: 2.0.1
+Current version: 2.0.2
 
 ## Overview
 

@@ -1,6 +1,6 @@
 {
-  "name": "gma2_commandbuilder",
-  "version": "2.0.1",
+  "name": "gma2-command-builder",
+  "version": "2.0.2",
   "description": "A lightweight, fluent API for building GMA2 command strings in Lua.",
   "main": "init.lua",
   "files": [
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidlevyelias/gma2_commandbuilder.git"
+    "url": "git+https://github.com/davidlevyelias/gma2-command-builder.git"
   },
   "keywords": [
     "lua",
@@ -33,9 +33,9 @@
   "license": "MIT",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/davidlevyelias/gma2_commandbuilder/issues"
+    "url": "https://github.com/davidlevyelias/gma2-command-builder/issues"
   },
-  "homepage": "https://github.com/davidlevyelias/gma2_commandbuilder#readme",
+  "homepage": "https://github.com/davidlevyelias/gma2-command-builder#readme",
   "devDependencies": {
     "@davidlevyelias/luapack": "^2.1.2"
   }
