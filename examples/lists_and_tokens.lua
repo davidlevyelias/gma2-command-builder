@@ -1,9 +1,9 @@
 -- CommandBuilder list and token examples
 -- Run from repo root: lua .\examples\lists_and_tokens.lua
 
-package.path = package.path .. ';./?.lua;../?.lua'
+package.path = './?.lua;./?/init.lua;../?.lua;../?/init.lua;' .. package.path
 
-local cmd = require('CommandBuilder')
+local cmd = require('init')
 
 local CMD = cmd.new({
     execute = function(command)

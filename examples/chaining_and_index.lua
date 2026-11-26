@@ -1,9 +1,9 @@
 -- CommandBuilder chaining and indexing examples
 -- Run from repo root: lua .\examples\chaining_and_index.lua
 
-package.path = package.path .. ';./?.lua;../?.lua'
+package.path = './?.lua;./?/init.lua;../?.lua;../?/init.lua;' .. package.path
 
-local cmd = require('CommandBuilder')
+local cmd = require('init')
 
 local CMD = cmd.new({
     execute = function(command)

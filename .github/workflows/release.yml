@@ -16,19 +16,26 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Bundle (minify)
-        run: npm run bundle:minify
+      - name: Check the tag matches package.json
+        run: test "${{ github.ref_name }}" = "v$(node -p "require('./package.json').version")"
 
-      - name: Rename bundle
-        run: mv dist/CommandBuilder_bundle.lua "dist/CommandBuilder-${{ github.ref_name }}.min.lua"
+      - name: Bundle
+        run: npm run bundle
+
+      - name: Name the bundle after the tag
+        run: cp dist/gma2-command-builder.lua "dist/gma2-command-builder-${{ github.ref_name }}.lua"
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          files: dist/CommandBuilder-${{ github.ref_name }}.min.lua
-          generate_release_notes: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" \
+            "dist/gma2-command-builder-${{ github.ref_name }}.lua" \
+            --title "${{ github.ref_name }}" \
+            --generate-notes
